@@ -1,0 +1,20 @@
+name,website,city,country,start_date,end_date,frequency,industry,region,notes
+CES,https://www.ces.tech/,Las Vegas,United States,2026-01-06,2026-01-09,Annual,Technology & Electronics,North America,Consumer electronics and innovation
+MWC Barcelona,https://www.mwcbarcelona.com/,Barcelona,Spain,2026-03-02,2026-03-05,Annual,Technology & Electronics,Europe,Mobile and telecom industry
+Hannover Messe,https://www.hannovermesse.de/,Hanover,Germany,2026-04-20,2026-04-24,Annual,Industrial Technology,Europe,Industrial technology and manufacturing
+Canton Fair,https://www.cantonfair.org.cn/,Guangzhou,China,2026-04-15,2026-04-19,Biannual,General Merchandise,Asia,China import and export fair
+FIBO,https://www.fibo.com/,Cologne,Germany,2026-04-16,2026-04-19,Annual,Fitness & Wellness,Europe,Health, fitness, and wellness trade fair
+NRF Retail's Big Show,https://nrfbigshow.nrf.com/,New York,United States,2026-01-11,2026-01-13,Annual,Retail,North America,Retail industry flagship event
+GITEX Global,https://www.gitex.com/,Dubai,United Arab Emirates,2026-10-13,2026-10-17,Annual,Technology & Electronics,Middle East & Africa,Technology showcase for MENA
+MEDICA,https://www.medica-tradefair.com/,Dusseldorf,Germany,2026-11-16,2026-11-19,Annual,Healthcare & Medical,Europe,World forum for medicine
+Automechanika,https://automechanika.messefrankfurt.com/,Frankfurt,Germany,2026-09-08,2026-09-12,Biennial,Automotive & Transportation,Europe,Automotive aftermarket
+The Big 5,https://www.thebig5.ae/,Dubai,United Arab Emirates,2026-12-07,2026-12-10,Annual,Construction & Building Materials,Middle East & Africa,Construction industry event
+SIAL Paris,https://www.sialparis.com/,Paris,France,2026-10-18,2026-10-22,Biennial,Food & Beverage,Europe,Food innovation exhibition
+Anuga,https://www.anuga.com/,Cologne,Germany,2027-10-09,2027-10-13,Biennial,Food & Beverage,Europe,Global food and beverage trade fair
+ADIPEC,https://www.adipec.com/,Abu Dhabi,United Arab Emirates,2026-11-09,2026-11-12,Annual,Energy & Environment,Middle East & Africa,Petroleum exhibition and conference
+Agritechnica,https://www.agritechnica.com/,Hanover,Germany,2027-11-07,2027-11-13,Biennial,Agriculture,Europe,Agricultural machinery
+MAGIC,https://www.magicfashionevents.com/,Las Vegas,United States,2026-08-17,2026-08-19,Biannual,Fashion & Textiles,North America,Fashion trade show
+Intertextile Shanghai,https://intertextile-shanghai-apparel-fabrics.hk.messefrankfurt.com/,Shanghai,China,2026-09-02,2026-09-04,Biannual,Fashion & Textiles,Asia,Apparel fabrics and accessories
+Gulfood,https://www.gulfood.com/,Dubai,United Arab Emirates,2026-02-17,2026-02-21,Annual,Food & Beverage,Middle East & Africa,Food and beverage trade show
+Japan IT Week,https://www.japan-it.jp/en-gb.html,Tokyo,Japan,2026-04-08,2026-04-10,Biannual,Technology & Electronics,Asia,Japan IT trade show
+AfricaCom,https://tmt.knect365.com/africacom/,Cape Town,South Africa,2026-11-03,2026-11-05,Annual,Technology & Electronics,Middle East & Africa,Telecom and tech event
