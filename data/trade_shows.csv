@@ -1,20 +1,77 @@
 name,website,city,country,start_date,end_date,frequency,industry,region,notes
 CES,https://www.ces.tech/,Las Vegas,United States,2026-01-06,2026-01-09,Annual,Technology & Electronics,North America,Consumer electronics and innovation
 MWC Barcelona,https://www.mwcbarcelona.com/,Barcelona,Spain,2026-03-02,2026-03-05,Annual,Technology & Electronics,Europe,Mobile and telecom industry
-Hannover Messe,https://www.hannovermesse.de/,Hanover,Germany,2026-04-20,2026-04-24,Annual,Industrial Technology,Europe,Industrial technology and manufacturing
-Canton Fair,https://www.cantonfair.org.cn/,Guangzhou,China,2026-04-15,2026-04-19,Biannual,General Merchandise,Asia,China import and export fair
-FIBO,https://www.fibo.com/,Cologne,Germany,2026-04-16,2026-04-19,Annual,Fitness & Wellness,Europe,Health, fitness, and wellness trade fair
-NRF Retail's Big Show,https://nrfbigshow.nrf.com/,New York,United States,2026-01-11,2026-01-13,Annual,Retail,North America,Retail industry flagship event
+COMPUTEX,https://www.computextaipei.com.tw/,Taipei,Taiwan,2026-06-02,2026-06-06,Annual,Technology & Electronics,Asia,ICT trade show
+IFA Berlin,https://www.ifa-berlin.com/,Berlin,Germany,2026-09-04,2026-09-08,Annual,Technology & Electronics,Europe,Consumer electronics and appliances
 GITEX Global,https://www.gitex.com/,Dubai,United Arab Emirates,2026-10-13,2026-10-17,Annual,Technology & Electronics,Middle East & Africa,Technology showcase for MENA
-MEDICA,https://www.medica-tradefair.com/,Dusseldorf,Germany,2026-11-16,2026-11-19,Annual,Healthcare & Medical,Europe,World forum for medicine
-Automechanika,https://automechanika.messefrankfurt.com/,Frankfurt,Germany,2026-09-08,2026-09-12,Biennial,Automotive & Transportation,Europe,Automotive aftermarket
-The Big 5,https://www.thebig5.ae/,Dubai,United Arab Emirates,2026-12-07,2026-12-10,Annual,Construction & Building Materials,Middle East & Africa,Construction industry event
-SIAL Paris,https://www.sialparis.com/,Paris,France,2026-10-18,2026-10-22,Biennial,Food & Beverage,Europe,Food innovation exhibition
+Japan IT Week,https://www.japan-it.jp/en-gb.html,Tokyo,Japan,2026-04-08,2026-04-10,Biannual,Technology & Electronics,Asia,Japan IT trade show
+Embedded World,https://www.embedded-world.de/en,Nuremberg,Germany,2026-03-10,2026-03-12,Annual,Technology & Electronics,Europe,Embedded systems and IoT
+SEMICON China,https://www.semiconchina.org/,Shanghai,China,2026-03-18,2026-03-20,Annual,Technology & Electronics,Asia,Semiconductor manufacturing
+Electronica,https://www.electronica.de/en/,Munich,Germany,2026-11-10,2026-11-13,Biennial,Technology & Electronics,Europe,Electronics components and systems
+Interop Tokyo,https://www.interop.jp/,Tokyo,Japan,2026-06-10,2026-06-12,Annual,Technology & Electronics,Asia,Network and internet technology
 Anuga,https://www.anuga.com/,Cologne,Germany,2027-10-09,2027-10-13,Biennial,Food & Beverage,Europe,Global food and beverage trade fair
+SIAL Paris,https://www.sialparis.com/,Paris,France,2026-10-18,2026-10-22,Biennial,Food & Beverage,Europe,Food innovation exhibition
+Gulfood,https://www.gulfood.com/,Dubai,United Arab Emirates,2026-02-17,2026-02-21,Annual,Food & Beverage,Middle East & Africa,Food and beverage trade show
+SIAL China,https://www.sialchina.com/,Shanghai,China,2026-05-18,2026-05-20,Annual,Food & Beverage,Asia,Food innovation and import/export
+FOODEX Japan,https://www.jma.or.jp/foodex/en/,Tokyo,Japan,2026-03-10,2026-03-13,Annual,Food & Beverage,Asia,International food and beverage exhibition
+Seafood Expo Global,https://www.seafoodexpo.com/global/,Barcelona,Spain,2026-04-21,2026-04-23,Annual,Food & Beverage,Europe,Global seafood industry expo
+Fancy Food Show,https://www.specialtyfood.com/fancy-food-show/,New York,United States,2026-06-28,2026-06-30,Annual,Food & Beverage,North America,Specialty food and beverage show
+Sweets & Snacks Expo,https://www.sweetsandsnacks.com/,Indianapolis,United States,2026-05-12,2026-05-14,Annual,Food & Beverage,North America,Confectionery and snacks
+MEDICA,https://www.medica-tradefair.com/,Dusseldorf,Germany,2026-11-16,2026-11-19,Annual,Healthcare & Medical,Europe,World forum for medicine
+Arab Health,https://www.arabhealthonline.com/,Dubai,United Arab Emirates,2026-01-26,2026-01-29,Annual,Healthcare & Medical,Middle East & Africa,Healthcare exhibition
+HIMSS Global Health Conference,https://www.himss.org/global-health-conference,Orlando,United States,2026-03-09,2026-03-12,Annual,Healthcare & Medical,North America,Health IT conference and expo
+RSNA,https://www.rsna.org/annual-meeting,Chicago,United States,2026-11-29,2026-12-04,Annual,Healthcare & Medical,North America,Radiology annual meeting
+BIO International Convention,https://www.bio.org/events/bio-international-convention,Boston,United States,2026-06-08,2026-06-11,Annual,Healthcare & Medical,North America,Biotechnology convention
+FIME,https://www.fime.com/,Miami,United States,2026-06-24,2026-06-26,Annual,Healthcare & Medical,North America,Medical device and equipment
+MEDLAB Middle East,https://www.medlabme.com/,Dubai,United Arab Emirates,2026-02-09,2026-02-12,Annual,Healthcare & Medical,Middle East & Africa,Laboratory and diagnostics
+Hannover Messe,https://www.hannovermesse.de/,Hanover,Germany,2026-04-20,2026-04-24,Annual,Manufacturing & Industrial,Europe,Industrial technology and manufacturing
+IMTS,https://www.imts.com/,Chicago,United States,2026-09-14,2026-09-19,Biennial,Manufacturing & Industrial,North America,Manufacturing technology show
+EMO Hannover,https://emo-hannover.de/en,Hanover,Germany,2027-09-18,2027-09-23,Biennial,Manufacturing & Industrial,Europe,Machine tool and production technology
+FABTECH,https://www.fabtechexpo.com/,Chicago,United States,2026-11-09,2026-11-12,Annual,Manufacturing & Industrial,North America,Metal forming and fabrication
+Automatica,https://automatica-munich.com/en/,Munich,Germany,2026-06-24,2026-06-27,Biennial,Manufacturing & Industrial,Europe,Automation and robotics
+EuroBLECH,https://www.euroblech.com/en/,Hanover,Germany,2026-10-20,2026-10-23,Biennial,Manufacturing & Industrial,Europe,Sheet metal working
+AHR Expo,https://www.ahrexpo.com/,Las Vegas,United States,2026-01-26,2026-01-28,Annual,Manufacturing & Industrial,North America,HVACR industry
+MAGIC,https://www.magicfashionevents.com/,Las Vegas,United States,2026-08-17,2026-08-19,Biannual,Fashion & Textiles,North America,Fashion trade show
+Texworld Paris,https://texworld-paris.fr.messefrankfurt.com/,Paris,France,2026-07-01,2026-07-03,Biannual,Fashion & Textiles,Europe,International fabric sourcing
+Intertextile Shanghai,https://intertextile-shanghai-apparel-fabrics.hk.messefrankfurt.com/,Shanghai,China,2026-09-02,2026-09-04,Biannual,Fashion & Textiles,Asia,Apparel fabrics and accessories
+Premiere Vision Paris,https://www.premierevision.com/en,Paris,France,2026-02-10,2026-02-12,Biannual,Fashion & Textiles,Europe,"Fabric, yarns, and design trends"
+Milano Unica,https://www.milanounica.it/en,Milan,Italy,2026-02-03,2026-02-05,Biannual,Fashion & Textiles,Europe,High-end textiles and accessories
+Texworld USA,https://texworld-usa.us.messefrankfurt.com/,New York,United States,2026-07-21,2026-07-23,Biannual,Fashion & Textiles,North America,Apparel fabric sourcing
+Apparel Sourcing Paris,https://apparel-sourcing-paris.fr.messefrankfurt.com/,Paris,France,2026-07-01,2026-07-03,Biannual,Fashion & Textiles,Europe,Apparel manufacturing and sourcing
+Automechanika,https://automechanika.messefrankfurt.com/,Frankfurt,Germany,2026-09-08,2026-09-12,Biennial,Automotive,Europe,Automotive aftermarket
+IAA Mobility,https://www.iaa-mobility.com/,Munich,Germany,2027-09-07,2027-09-12,Biennial,Automotive,Europe,International motor show
+SEMA Show,https://www.semashow.com/,Las Vegas,United States,2026-11-03,2026-11-06,Annual,Automotive,North America,Specialty automotive products
+Detroit Auto Show,https://www.naias.com/,Detroit,United States,2026-01-14,2026-01-25,Annual,Automotive,North America,North American International Auto Show
+Auto Shanghai,http://www.autoshow.com.cn/,Shanghai,China,2027-04-21,2027-04-30,Biennial,Automotive,Asia,China international auto show
+Automotive World,https://www.automotiveworld.jp/en-gb.html,Tokyo,Japan,2026-01-21,2026-01-23,Annual,Automotive,Asia,Automotive electronics and manufacturing
+Automechanika Shanghai,https://automechanika-shanghai.hk.messefrankfurt.com/,Shanghai,China,2026-12-02,2026-12-05,Annual,Automotive,Asia,Automotive parts and aftermarket
+FIA Brasil,https://www.fiabrasil.com.br/,Sao Paulo,Brazil,2026-07-14,2026-07-17,Annual,Automotive,Latin America,Auto parts and aftermarket
+Canton Fair,https://www.cantonfair.org.cn/,Guangzhou,China,2026-04-15,2026-04-19,Biannual,General Merchandise,Asia,China import and export fair
+CIIE,https://www.ciie.org/,Shanghai,China,2026-11-05,2026-11-10,Annual,General Merchandise,Asia,China International Import Expo
+NRF Retail's Big Show,https://nrfbigshow.nrf.com/,New York,United States,2026-01-11,2026-01-13,Annual,Retail,North America,Retail industry flagship event
+FIBO,https://www.fibo.com/,Cologne,Germany,2026-04-16,2026-04-19,Annual,Fitness & Wellness,Europe,"Health, fitness, and wellness trade fair"
 ADIPEC,https://www.adipec.com/,Abu Dhabi,United Arab Emirates,2026-11-09,2026-11-12,Annual,Energy & Environment,Middle East & Africa,Petroleum exhibition and conference
 Agritechnica,https://www.agritechnica.com/,Hanover,Germany,2027-11-07,2027-11-13,Biennial,Agriculture,Europe,Agricultural machinery
-MAGIC,https://www.magicfashionevents.com/,Las Vegas,United States,2026-08-17,2026-08-19,Biannual,Fashion & Textiles,North America,Fashion trade show
-Intertextile Shanghai,https://intertextile-shanghai-apparel-fabrics.hk.messefrankfurt.com/,Shanghai,China,2026-09-02,2026-09-04,Biannual,Fashion & Textiles,Asia,Apparel fabrics and accessories
-Gulfood,https://www.gulfood.com/,Dubai,United Arab Emirates,2026-02-17,2026-02-21,Annual,Food & Beverage,Middle East & Africa,Food and beverage trade show
-Japan IT Week,https://www.japan-it.jp/en-gb.html,Tokyo,Japan,2026-04-08,2026-04-10,Biannual,Technology & Electronics,Asia,Japan IT trade show
+SIMA,https://en.simaonline.com/,Paris,France,2026-11-15,2026-11-19,Biennial,Agriculture,Europe,International agribusiness show
+The Big 5,https://www.thebig5.ae/,Dubai,United Arab Emirates,2026-12-07,2026-12-10,Annual,Construction & Building Materials,Middle East & Africa,Construction industry event
+bauma,https://bauma.de/,Munich,Germany,2028-04-03,2028-04-09,Triennial,Construction & Building Materials,Europe,Construction machinery trade fair
+PACK EXPO International,https://www.packexpointernational.com/,Chicago,United States,2026-10-18,2026-10-21,Biennial,Packaging,North America,Packaging and processing
+Expoagro,https://www.expoagro.com.ar/,San Nicolas,Argentina,2026-03-10,2026-03-13,Annual,Agriculture,Latin America,Agribusiness expo
+FISPAL Tecnologia,https://www.fispaltecnologia.com.br/,Sao Paulo,Brazil,2026-06-23,2026-06-26,Biennial,Food & Beverage,Latin America,Food and beverage processing
+Propak Asia,https://www.propakasia.com/,Bangkok,Thailand,2026-06-10,2026-06-13,Annual,Packaging,Asia,Processing and packaging
+IFAT Africa,https://ifat-africa.com/,Johannesburg,South Africa,2026-07-07,2026-07-09,Biennial,Energy & Environment,Middle East & Africa,Water and waste management
 AfricaCom,https://tmt.knect365.com/africacom/,Cape Town,South Africa,2026-11-03,2026-11-05,Annual,Technology & Electronics,Middle East & Africa,Telecom and tech event
+Africa Health,https://www.africahealthexhibition.com/,Johannesburg,South Africa,2026-10-14,2026-10-16,Annual,Healthcare & Medical,Middle East & Africa,Healthcare exhibition
+FISPAL Food Service,https://www.fispalfoodservice.com.br/,Sao Paulo,Brazil,2026-06-02,2026-06-05,Biennial,Food & Beverage,Latin America,Food service and hospitality
+Expoalimentaria,https://expoalimentariaperu.com/,Lima,Peru,2026-09-24,2026-09-26,Annual,Food & Beverage,Latin America,Food and beverage trade fair
+Hospitalar,https://www.hospitalar.com/en/,Sao Paulo,Brazil,2026-05-19,2026-05-22,Annual,Healthcare & Medical,Latin America,Healthcare and medical equipment
+Arabian Travel Market,https://www.wtm.com/atm/en-gb.html,Dubai,United Arab Emirates,2026-05-04,2026-05-07,Annual,Travel & Tourism,Middle East & Africa,Travel trade show
+ITB Asia,https://www.itb-asia.com/,Singapore,Singapore,2026-10-21,2026-10-23,Annual,Travel & Tourism,Asia,Travel trade show
+ITB Berlin,https://www.itb.com/,Berlin,Germany,2026-03-03,2026-03-05,Annual,Travel & Tourism,Europe,Travel trade show
+Labelexpo Europe,https://www.labelexpo-europe.com/,Barcelona,Spain,2027-09-16,2027-09-19,Biennial,Packaging,Europe,Labels and package printing
+Printpack India,https://www.printpackindia.in/,Greater Noida,India,2027-02-01,2027-02-05,Biennial,Packaging,Asia,Printing and packaging
+Ipack-Ima,https://www.ipackima.com/en/,Milan,Italy,2026-05-26,2026-05-29,Triennial,Packaging,Europe,Processing and packaging technologies
+ProPak China,https://www.propakchina.com/,Shanghai,China,2026-06-24,2026-06-26,Annual,Packaging,Asia,Processing and packaging
+Propak East Africa,https://www.propakeastafrica.com/,Nairobi,Kenya,2026-05-12,2026-05-14,Biennial,Packaging,Middle East & Africa,Packaging and plastics
+IDEX,https://www.idexuae.ae/,Abu Dhabi,United Arab Emirates,2027-02-21,2027-02-25,Biennial,Defense,Middle East & Africa,Defense exhibition
+AUSA Annual Meeting,https://www.ausa.org/annual-meeting,Washington,United States,2026-10-12,2026-10-14,Annual,Defense,North America,Army industry event
