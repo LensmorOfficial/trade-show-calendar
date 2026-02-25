@@ -1,0 +1,90 @@
+name: Submit a trade show
+
+description: Propose a new trade show entry for the dataset
+
+title: "Add: [Trade Show Name]"
+
+labels: ["data-submission"]
+
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Trade show name
+      placeholder: Example Expo
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Official website
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: city
+    attributes:
+      label: City
+      placeholder: City
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      placeholder: Country
+    validations:
+      required: true
+  - type: input
+    id: start_date
+    attributes:
+      label: Start date (YYYY-MM-DD)
+      placeholder: 2026-01-15
+    validations:
+      required: true
+  - type: input
+    id: end_date
+    attributes:
+      label: End date (YYYY-MM-DD)
+      placeholder: 2026-01-18
+    validations:
+      required: true
+  - type: input
+    id: frequency
+    attributes:
+      label: Frequency
+      placeholder: Annual, biennial, etc.
+    validations:
+      required: true
+  - type: input
+    id: industry
+    attributes:
+      label: Industry
+      placeholder: Technology & Electronics
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Region
+      placeholder: North America
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Short description or context
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I confirm the event is active
+          required: true
+        - label: I confirm the link is official and working
+          required: true
+        - label: I confirmed the dates from an official source
+          required: true

@@ -1,0 +1,33 @@
+name: Bug report
+
+description: Report an issue with the dataset
+
+title: "Bug: "
+
+labels: ["bug"]
+
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is the issue?
+      description: Describe the problem and where it appears
+    validations:
+      required: true
+  - type: input
+    id: row
+    attributes:
+      label: Affected entry (name or row)
+      placeholder: CES
+  - type: input
+    id: source
+    attributes:
+      label: Source link (if applicable)
+      placeholder: https://example.com
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I verified the issue on the official source
+          required: true
