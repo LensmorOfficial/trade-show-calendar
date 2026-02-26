@@ -2,7 +2,7 @@
 
 > Open dataset of global trade shows with dates, locations, and industry categories.
 
-**Lensmor** helps B2B teams discover the right events, analyze exhibitors, and build qualified lead lists. Learn more at [lensmor.com](https://www.lensmor.com/).
+Built by [Lensmor](https://www.lensmor.com/) — AI-powered trade show intelligence for B2B teams.
 
 ## Dataset
 
@@ -66,6 +66,13 @@ When adding new events, please include:
 - A link to the official event website as the source
 - Verified dates for the current or next edition
 - The correct industry category and region
+
+## More Open Source from Lensmor
+
+- [awesome-trade-shows](https://github.com/LensmorOfficial/awesome-trade-shows) — Curated list of 100+ trade shows across 15 industries
+- [exhibitor-intelligence-playbook](https://github.com/LensmorOfficial/exhibitor-intelligence-playbook) — Complete B2B trade show ROI playbook
+- [event-tech-landscape](https://github.com/LensmorOfficial/event-tech-landscape) — Map of 80+ tools powering the event industry
+- [trade-show-email-templates](https://github.com/LensmorOfficial/trade-show-email-templates) — Ready-to-use email templates for trade show outreach
 
 ## License
 
