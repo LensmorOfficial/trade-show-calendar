@@ -26,9 +26,46 @@ This repository provides a starter calendar dataset in both CSV and JSON formats
 | region | Region grouping |
 | notes | Additional context |
 
+## Data Sources
+
+All entries are compiled from publicly available and verified sources:
+
+- **Official event websites** — Primary source for dates, locations, and descriptions
+- **Exhibition industry associations** — [UFI](https://www.ufi.org/), [IAEE](https://www.iaee.com/), [SISO](https://www.siso.org/), [AUMA](https://www.auma.de/)
+- **Event directories** — [10Times](https://10times.com/), [EventsEye](https://www.eventseye.com/), [m+a Expodatabase](https://www.expodatabase.com/)
+- **Industry reports** — [CEIR Index](https://www.ceir.org/), [UFI Global Barometer](https://www.ufi.org/research/)
+
+### Data quality
+
+- Each entry is manually verified against the official event website
+- Dates reflect the most recently confirmed schedule (some 2026 dates are tentative)
+- Events marked as postponed or cancelled are noted in the `notes` field
+- Discontinued events are removed during quarterly reviews
+
+### Update frequency
+
+- **Monthly** — New events and date corrections
+- **Quarterly** — Full review of all entries for accuracy
+- **Community** — Pull requests are reviewed and merged on a rolling basis
+
+## Coverage
+
+The dataset currently includes **76 trade shows** across:
+
+- 9 industry categories (Technology, Food & Beverage, Healthcare, Manufacturing, Automotive, Fashion, Energy, Agriculture, Construction)
+- 5 regions (Asia, Europe, North America, Middle East & Africa, Latin America)
+- 25+ countries
+
+We are actively expanding coverage. See [open issues](https://github.com/LensmorOfficial/trade-show-calendar/issues) for planned additions.
+
 ## Contributing
 
 Contributions are welcome. Please open an issue or pull request with verified sources.
+
+When adding new events, please include:
+- A link to the official event website as the source
+- Verified dates for the current or next edition
+- The correct industry category and region
 
 ## License
 
