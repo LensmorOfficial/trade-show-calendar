@@ -2,7 +2,7 @@
 
 > Open dataset of global trade shows with dates, locations, and industry categories.
 
-Built by [Lensmor](https://www.lensmor.com/) — AI-powered trade show intelligence for B2B teams.
+Built by [Lensmor](https://www.lensmor.com/) — AI-powered trade show intelligence for B2B teams. Learn how to turn trade shows into [lead capture machines](https://www.lensmor.com/blog/trade-show-lead-capture).
 
 ## Dataset
 
