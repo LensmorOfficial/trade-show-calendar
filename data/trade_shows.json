@@ -384,6 +384,78 @@
     "notes": "HVACR industry"
   },
   {
+    "name": "Interpack",
+    "website": "https://www.interpack.com/",
+    "city": "Dusseldorf",
+    "country": "Germany",
+    "start_date": "2026-05-07",
+    "end_date": "2026-05-13",
+    "frequency": "Triennial",
+    "industry": "Packaging",
+    "region": "Europe",
+    "notes": "Packaging and processing trade fair"
+  },
+  {
+    "name": "Infosecurity Europe",
+    "website": "https://www.infosecurityeurope.com/",
+    "city": "London",
+    "country": "United Kingdom",
+    "start_date": "2026-06-02",
+    "end_date": "2026-06-04",
+    "frequency": "Annual",
+    "industry": "Cybersecurity",
+    "region": "Europe",
+    "notes": "Europe's leading cybersecurity event"
+  },
+  {
+    "name": "Intersolar Europe",
+    "website": "https://www.intersolar.de/",
+    "city": "Munich",
+    "country": "Germany",
+    "start_date": "2026-06-23",
+    "end_date": "2026-06-25",
+    "frequency": "Annual",
+    "industry": "Energy & Environment",
+    "region": "Europe",
+    "notes": "Solar energy industry exhibition"
+  },
+  {
+    "name": "The Battery Show Europe",
+    "website": "https://www.thebatteryshow.eu/",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-11",
+    "frequency": "Annual",
+    "industry": "Energy & Environment",
+    "region": "Europe",
+    "notes": "Advanced battery and EV supply chain"
+  },
+  {
+    "name": "London Tech Week",
+    "website": "https://londontechweek.com/",
+    "city": "London",
+    "country": "United Kingdom",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-12",
+    "frequency": "Annual",
+    "industry": "Technology & Electronics",
+    "region": "Europe",
+    "notes": "Technology festival and conference"
+  },
+  {
+    "name": "Shoptalk Europe",
+    "website": "https://shoptalkeurope.com/",
+    "city": "Barcelona",
+    "country": "Spain",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-11",
+    "frequency": "Annual",
+    "industry": "Retail",
+    "region": "Europe",
+    "notes": "Retail and ecommerce conference and expo"
+  },
+  {
     "name": "MAGIC",
     "website": "https://www.magicfashionevents.com/",
     "city": "Las Vegas",
