@@ -1,6 +1,16 @@
+<p align="center">
+  <a href="https://www.lensmor.com/?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar">
+    <img src="https://raw.githubusercontent.com/LensmorOfficial/.github/main/profile/assets/banner.png" alt="Lensmor" width="600">
+  </a>
+</p>
+
 # Trade Show Calendar
 
-> **[Lensmor](https://www.lensmor.com/?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar)** — Trade show intelligence platform. Find exhibitors, track competitors, and discover opportunities.
+[![Stars](https://img.shields.io/github/stars/LensmorOfficial/trade-show-calendar?style=flat)](https://github.com/LensmorOfficial/trade-show-calendar/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/LensmorOfficial/trade-show-calendar?style=flat)](https://github.com/LensmorOfficial/trade-show-calendar/commits/main)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+**If you find this dataset useful, please star this repo — it helps others discover it.**
 
 > Open dataset of global trade shows with dates, locations, and industry categories.
 
@@ -73,6 +83,7 @@ When adding new events, please include:
 
 - [awesome-trade-shows](https://github.com/LensmorOfficial/awesome-trade-shows) — Curated list of 100+ trade shows across 15 industries
 - [exhibitor-intelligence-playbook](https://github.com/LensmorOfficial/exhibitor-intelligence-playbook) — Complete B2B trade show ROI playbook
+- [trade-show-skills](https://github.com/LensmorOfficial/trade-show-skills) — AI-powered Claude Code skills for trade show automation
 - [event-tech-landscape](https://github.com/LensmorOfficial/event-tech-landscape) — Map of 80+ tools powering the event industry
 - [trade-show-email-templates](https://github.com/LensmorOfficial/trade-show-email-templates) — Ready-to-use email templates for trade show outreach
 
