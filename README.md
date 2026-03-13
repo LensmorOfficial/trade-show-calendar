@@ -62,11 +62,11 @@ All entries are compiled from publicly available and verified sources:
 
 ## Coverage
 
-The dataset currently includes **76 trade shows** across:
+The dataset currently includes **109 trade shows** across:
 
-- 9 industry categories (Technology, Food & Beverage, Healthcare, Manufacturing, Automotive, Fashion, Energy, Agriculture, Construction)
+- 15 industry categories (Technology, Food & Beverage, Healthcare, Manufacturing, Automotive, Fashion, Energy, Agriculture, Construction, Consumer Goods, Real Estate, Digital Marketing, Pharmaceutical, Beauty & Personal Care, Education)
 - 5 regions (Asia, Europe, North America, Middle East & Africa, Latin America)
-- 25+ countries
+- 30+ countries
 
 We are actively expanding coverage. See [open issues](https://github.com/LensmorOfficial/trade-show-calendar/issues) for planned additions.
 
