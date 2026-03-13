@@ -62,11 +62,11 @@ All entries are compiled from publicly available and verified sources:
 
 ## Coverage
 
-The dataset currently includes **109 trade shows** across:
+The dataset currently includes **133 trade shows** across:
 
-- 15 industry categories (Technology, Food & Beverage, Healthcare, Manufacturing, Automotive, Fashion, Energy, Agriculture, Construction, Consumer Goods, Real Estate, Digital Marketing, Pharmaceutical, Beauty & Personal Care, Education)
+- 19 industry categories (Technology, Food & Beverage, Healthcare, Manufacturing, Automotive, Fashion, Energy, Agriculture, Construction, Consumer Goods, Real Estate, Digital Marketing, Pharmaceutical, Beauty & Personal Care, Education, Retail, Finance & Fintech, Defense, Logistics & Supply Chain)
 - 5 regions (Asia, Europe, North America, Middle East & Africa, Latin America)
-- 30+ countries
+- 35+ countries
 
 We are actively expanding coverage. See [open issues](https://github.com/LensmorOfficial/trade-show-calendar/issues) for planned additions.
 
@@ -85,7 +85,7 @@ When adding new events, please include:
 
 ## More Open Source from Lensmor
 
-- [awesome-trade-shows](https://github.com/LensmorOfficial/awesome-trade-shows) — Curated list of 100+ trade shows across 15 industries
+- [awesome-trade-shows](https://github.com/LensmorOfficial/awesome-trade-shows) — Curated list of 130+ trade shows across 16 industries
 - [exhibitor-intelligence-playbook](https://github.com/LensmorOfficial/exhibitor-intelligence-playbook) — Complete B2B trade show ROI playbook
 - [trade-show-skills](https://github.com/LensmorOfficial/trade-show-skills) — AI-powered Claude Code skills for trade show automation
 - [event-tech-landscape](https://github.com/LensmorOfficial/event-tech-landscape) — Map of 80+ tools powering the event industry
