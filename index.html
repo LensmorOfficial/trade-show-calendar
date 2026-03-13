@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Trade Show Calendar 2026</title>
+  <meta name="description" content="Open-source calendar of 133+ global trade shows across 24 industries. Filter by industry, region, and date.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f9fa;
+      --surface: #ffffff;
+      --border: #e5e7eb;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --accent: #1d4ed8;
+      --accent-light: #eff6ff;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    /* Region colors */
+    .r-na  { --rc: #3b82f6; --rcl: #eff6ff; }
+    .r-eu  { --rc: #8b5cf6; --rcl: #f5f3ff; }
+    .r-as  { --rc: #ef4444; --rcl: #fef2f2; }
+    .r-mea { --rc: #f59e0b; --rcl: #fffbeb; }
+    .r-la  { --rc: #10b981; --rcl: #ecfdf5; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0 0;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    header p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .header-link {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      border: 1px solid var(--accent);
+      padding: 6px 14px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .header-link:hover { background: var(--accent-light); }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 16px;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    #search {
+      width: 100%;
+      padding: 8px 10px 8px 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px;
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+    }
+    #search:focus { border-color: var(--accent); }
+
+    select {
+      padding: 8px 28px 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px;
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      outline: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+    }
+    select:focus { border-color: var(--accent); }
+
+    .view-toggle {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .view-toggle button {
+      padding: 8px 16px;
+      border: none;
+      background: var(--surface);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .view-toggle button + button { border-left: 1px solid var(--border); }
+    .view-toggle button.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Main content */
+    .content-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .stats-bar strong { color: var(--text); }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--rc);
+    }
+
+    /* ── TIMELINE VIEW ── */
+    #timeline-view .month-section { margin-bottom: 32px; }
+
+    .month-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .month-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      min-width: 80px;
+    }
+    .month-count {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--border);
+      border-radius: 12px;
+      padding: 1px 8px;
+    }
+    .month-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .month-current .month-name { color: var(--accent); }
+    .month-current .month-line { background: var(--accent); opacity: 0.3; }
+
+    .month-shows {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    .show-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      display: flex;
+      gap: 12px;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.15s;
+    }
+    .show-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .card-accent {
+      width: 3px;
+      border-radius: 2px;
+      background: var(--rc);
+      flex-shrink: 0;
+    }
+    .card-body { flex: 1; min-width: 0; }
+    .card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-name a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card-name a:hover { color: var(--accent); }
+    .card-location {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+    .card-dates {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 8px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 12px;
+      background: var(--rcl);
+      color: var(--rc);
+      font-weight: 500;
+    }
+    .tag-industry {
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    /* ── LIST VIEW ── */
+    #list-view {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .list-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .list-table th {
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .list-table th:hover { color: var(--text); }
+    .list-table th .sort-arrow { margin-left: 4px; opacity: 0.4; }
+    .list-table th.sort-asc .sort-arrow::after { content: '↑'; opacity: 1; }
+    .list-table th.sort-desc .sort-arrow::after { content: '↓'; opacity: 1; }
+    .list-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .list-table tr:last-child td { border-bottom: none; }
+    .list-table tr:hover td { background: #fafafa; }
+    .table-name a {
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .table-name a:hover { color: var(--accent); }
+    .table-region-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--rc);
+      margin-right: 6px;
+    }
+    .table-industry-tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 12px;
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--text-muted);
+    }
+    .empty-state h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--text); }
+    .empty-state p { font-size: 14px; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 40px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .header-top { flex-direction: column; }
+      .controls { flex-direction: column; align-items: stretch; }
+      .search-wrap { min-width: unset; }
+      .content-wrap { padding: 16px; }
+      .month-shows { grid-template-columns: 1fr; }
+      .list-table th:nth-child(4),
+      .list-table td:nth-child(4) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-top">
+      <div>
+        <h1>Global Trade Show Calendar 2026</h1>
+        <p>Open-source dataset of global trade shows — filter by industry, region, and date</p>
+      </div>
+      <a class="header-link" href="https://www.lensmor.com/?utm_source=github&utm_medium=trade-show-calendar&utm_campaign=header" target="_blank" rel="noopener">
+        Find Exhibitors → Lensmor
+      </a>
+    </div>
+    <div class="controls">
+      <div class="search-wrap">
+        <svg class="search-icon" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="9" r="6"/><path d="m15 15 3 3"/>
+        </svg>
+        <input type="search" id="search" placeholder="Search by name, city, or notes…" autocomplete="off">
+      </div>
+      <select id="industry-filter">
+        <option value="">All Industries</option>
+      </select>
+      <select id="region-filter">
+        <option value="">All Regions</option>
+      </select>
+      <div class="view-toggle">
+        <button id="btn-timeline" class="active" onclick="setView('timeline')">Timeline</button>
+        <button id="btn-list" onclick="setView('list')">List</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="content-wrap">
+  <div class="stats-bar" id="stats-bar"></div>
+
+  <div class="legend" id="legend"></div>
+
+  <div id="timeline-view"></div>
+  <div id="list-view" style="display:none"></div>
+</div>
+
+<footer>
+  Data updated regularly &middot;
+  <a href="https://github.com/LensmorOfficial/trade-show-calendar" target="_blank" rel="noopener">View on GitHub</a>
+  &middot; Want exhibitor intelligence?
+  <a href="https://www.lensmor.com/?utm_source=github&utm_medium=trade-show-calendar&utm_campaign=footer" target="_blank" rel="noopener">Try Lensmor</a>
+</footer>
+
+<script>
+const REGION_CLASS = {
+  'North America': 'r-na',
+  'Europe':        'r-eu',
+  'Asia':          'r-as',
+  'Middle East & Africa': 'r-mea',
+  'Latin America': 'r-la',
+};
+const REGION_COLOR = {
+  'North America': '#3b82f6',
+  'Europe':        '#8b5cf6',
+  'Asia':          '#ef4444',
+  'Middle East & Africa': '#f59e0b',
+  'Latin America': '#10b981',
+};
+const MONTHS = ['January','February','March','April','May','June',
+                'July','August','September','October','November','December'];
+
+let allShows = [];
+let filtered = [];
+let currentView = 'timeline';
+let sortKey = 'start_date';
+let sortDir = 1;
+
+// Format date range: "Jan 6–9" or "Jan 31 – Feb 2"
+function fmtRange(start, end) {
+  const s = new Date(start + 'T00:00:00');
+  const e = new Date(end + 'T00:00:00');
+  const mo = d => d.toLocaleString('en-US', { month: 'short' });
+  const dy = d => d.getDate();
+  if (s.getMonth() === e.getMonth()) {
+    return `${mo(s)} ${dy(s)}–${dy(e)}`;
+  }
+  return `${mo(s)} ${dy(s)} – ${mo(e)} ${dy(e)}`;
+}
+
+function fmtDateShort(str) {
+  const d = new Date(str + 'T00:00:00');
+  return d.toLocaleString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function getMonth(str) {
+  return parseInt(str.split('-')[1], 10) - 1; // 0-indexed
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function cardHTML(show) {
+  const rc = REGION_CLASS[show.region] || '';
+  const dateStr = fmtRange(show.start_date, show.end_date);
+  return `
+    <div class="show-card ${rc}">
+      <div class="card-accent"></div>
+      <div class="card-body">
+        <div class="card-name">
+          <a href="${esc(show.website)}" target="_blank" rel="noopener">${esc(show.name)}</a>
+        </div>
+        <div class="card-location">${esc(show.city)}, ${esc(show.country)}</div>
+        <div class="card-dates">${dateStr}</div>
+        <div class="card-tags">
+          <span class="tag">${esc(show.region)}</span>
+          <span class="tag tag-industry">${esc(show.industry)}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderTimeline() {
+  const view = document.getElementById('timeline-view');
+  if (filtered.length === 0) {
+    view.innerHTML = `<div class="empty-state"><h3>No trade shows found</h3><p>Try adjusting your filters.</p></div>`;
+    return;
+  }
+
+  // Group by month
+  const byMonth = {};
+  for (const show of filtered) {
+    const m = getMonth(show.start_date);
+    if (!byMonth[m]) byMonth[m] = [];
+    byMonth[m].push(show);
+  }
+
+  const today = new Date();
+  const currentMonth = today.getMonth();
+
+  let html = '';
+  for (let m = 0; m < 12; m++) {
+    if (!byMonth[m]) continue;
+    const shows = byMonth[m];
+    const isCurrent = m === currentMonth;
+    html += `
+      <div class="month-section">
+        <div class="month-header ${isCurrent ? 'month-current' : ''}">
+          <span class="month-name">${MONTHS[m]}</span>
+          <span class="month-count">${shows.length}</span>
+          <div class="month-line"></div>
+        </div>
+        <div class="month-shows">
+          ${shows.map(cardHTML).join('')}
+        </div>
+      </div>`;
+  }
+  view.innerHTML = html;
+}
+
+function renderList() {
+  const view = document.getElementById('list-view');
+  if (filtered.length === 0) {
+    view.innerHTML = `<div class="empty-state"><h3>No trade shows found</h3><p>Try adjusting your filters.</p></div>`;
+    return;
+  }
+
+  const sorted = [...filtered].sort((a, b) => {
+    let va = a[sortKey], vb = b[sortKey];
+    if (typeof va === 'string') va = va.toLowerCase();
+    if (typeof vb === 'string') vb = vb.toLowerCase();
+    return va < vb ? -sortDir : va > vb ? sortDir : 0;
+  });
+
+  const cols = [
+    { key: 'name',       label: 'Name' },
+    { key: 'industry',   label: 'Industry' },
+    { key: 'city',       label: 'Location' },
+    { key: 'start_date', label: 'Dates' },
+    { key: 'region',     label: 'Region' },
+  ];
+
+  const headerCells = cols.map(c => {
+    const cls = sortKey === c.key ? (sortDir === 1 ? 'sort-asc' : 'sort-desc') : '';
+    return `<th class="${cls}" onclick="sortList('${c.key}')">${c.label}<span class="sort-arrow"></span></th>`;
+  }).join('');
+
+  const rows = sorted.map(show => {
+    const rc = REGION_CLASS[show.region] || '';
+    const regionColor = REGION_COLOR[show.region] || '#999';
+    return `<tr>
+      <td class="table-name"><a href="${esc(show.website)}" target="_blank" rel="noopener">${esc(show.name)}</a></td>
+      <td><span class="table-industry-tag">${esc(show.industry)}</span></td>
+      <td>${esc(show.city)}, ${esc(show.country)}</td>
+      <td>${fmtRange(show.start_date, show.end_date)}</td>
+      <td class="${rc}">
+        <span class="table-region-dot"></span>${esc(show.region)}
+      </td>
+    </tr>`;
+  }).join('');
+
+  view.innerHTML = `
+    <table class="list-table">
+      <thead><tr>${headerCells}</tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+function sortList(key) {
+  if (sortKey === key) {
+    sortDir *= -1;
+  } else {
+    sortKey = key;
+    sortDir = 1;
+  }
+  renderList();
+}
+
+function applyFilters() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const ind = document.getElementById('industry-filter').value;
+  const reg = document.getElementById('region-filter').value;
+
+  filtered = allShows.filter(show => {
+    if (ind && show.industry !== ind) return false;
+    if (reg && show.region !== reg) return false;
+    if (q) {
+      const hay = `${show.name} ${show.city} ${show.country} ${show.notes} ${show.industry}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // Stats
+  const total = allShows.length;
+  const shown = filtered.length;
+  document.getElementById('stats-bar').innerHTML =
+    `Showing <strong>${shown}</strong> of <strong>${total}</strong> trade shows`;
+
+  if (currentView === 'timeline') renderTimeline();
+  else renderList();
+}
+
+function setView(v) {
+  currentView = v;
+  document.getElementById('btn-timeline').classList.toggle('active', v === 'timeline');
+  document.getElementById('btn-list').classList.toggle('active', v === 'list');
+  document.getElementById('timeline-view').style.display = v === 'timeline' ? '' : 'none';
+  document.getElementById('list-view').style.display = v === 'list' ? '' : 'none';
+  if (v === 'timeline') renderTimeline();
+  else renderList();
+}
+
+function populateFilters() {
+  const industries = [...new Set(allShows.map(s => s.industry))].sort();
+  const regions = [...new Set(allShows.map(s => s.region))].sort();
+
+  const iSel = document.getElementById('industry-filter');
+  industries.forEach(i => {
+    const opt = document.createElement('option');
+    opt.value = opt.textContent = i;
+    iSel.appendChild(opt);
+  });
+
+  const rSel = document.getElementById('region-filter');
+  regions.forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = opt.textContent = r;
+    rSel.appendChild(opt);
+  });
+}
+
+function renderLegend() {
+  const legend = document.getElementById('legend');
+  legend.innerHTML = Object.entries(REGION_COLOR).map(([name, color]) =>
+    `<div class="legend-item ${REGION_CLASS[name]}">
+      <div class="legend-dot"></div>
+      <span>${name}</span>
+    </div>`
+  ).join('');
+}
+
+// Bootstrap
+fetch('data/trade_shows.json')
+  .then(r => r.json())
+  .then(data => {
+    allShows = data.sort((a, b) => a.start_date.localeCompare(b.start_date));
+    populateFilters();
+    renderLegend();
+    applyFilters();
+
+    document.getElementById('search').addEventListener('input', applyFilters);
+    document.getElementById('industry-filter').addEventListener('change', applyFilters);
+    document.getElementById('region-filter').addEventListener('change', applyFilters);
+  })
+  .catch(err => {
+    document.getElementById('timeline-view').innerHTML =
+      `<div class="empty-state"><h3>Failed to load data</h3><p>${err.message}</p></div>`;
+  });
+</script>
+</body>
+</html>

@@ -14,6 +14,9 @@
 
 > Open dataset of global trade shows with dates, locations, and industry categories.
 
+**[View Interactive Calendar →](https://lensmorofficial.github.io/trade-show-calendar/)**
+Browse and filter 133 trade shows by industry, region, and month.
+
 Built by [Lensmor](https://www.lensmor.com/?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar) — AI-powered trade show intelligence for B2B teams. Learn how to turn trade shows into [lead capture machines](https://www.lensmor.com/blog/trade-show-lead-capture?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar).
 
 ## Dataset
