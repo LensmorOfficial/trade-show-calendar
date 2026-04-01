@@ -91,6 +91,7 @@ When adding new events, please include:
 ## More Open Source from Lensmor
 
 - [awesome-trade-shows](https://github.com/LensmorOfficial/awesome-trade-shows) — Curated list of 130+ trade shows across 16 industries
+- [trade-show-world-map](https://github.com/LensmorOfficial/trade-show-world-map?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar) — Interactive world map of global trade shows by region and industry
 - [exhibitor-intelligence-playbook](https://github.com/LensmorOfficial/exhibitor-intelligence-playbook) — Complete B2B trade show ROI playbook
 - [trade-show-skills](https://github.com/LensmorOfficial/trade-show-skills) — AI-powered Claude Code skills for trade show automation
 - [event-tech-landscape](https://github.com/LensmorOfficial/event-tech-landscape) — Map of 80+ tools powering the event industry
