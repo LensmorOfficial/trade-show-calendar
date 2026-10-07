@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Trade Show Calendar 2026</title>
+  <title>Global Trade Show Calendar</title>
   <meta name="description" content="Open-source calendar of 133+ global trade shows across 24 industries. Filter by industry, region, and date.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -393,7 +393,7 @@
   <div class="header-inner">
     <div class="header-top">
       <div>
-        <h1>Global Trade Show Calendar 2026</h1>
+        <h1>Global Trade Show Calendar</h1>
         <p>Open-source dataset of global trade shows — filter by industry, region, and date</p>
       </div>
       <a class="header-link" href="https://www.lensmor.com/?utm_source=github&utm_medium=trade-show-calendar&utm_campaign=header" target="_blank" rel="noopener">
@@ -405,12 +405,16 @@
         <svg class="search-icon" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="9" cy="9" r="6"/><path d="m15 15 3 3"/>
         </svg>
-        <input type="search" id="search" placeholder="Search by name, city, or notes…" autocomplete="off">
+        <input type="search" id="search" aria-label="Search events" placeholder="Search by name, city, or notes…" autocomplete="off">
       </div>
-      <select id="industry-filter">
+      <select id="edition-filter" aria-label="Event edition range">
+        <option value="upcoming">Upcoming / Current</option>
+        <option value="all">All Listed Editions</option>
+      </select>
+      <select id="industry-filter" aria-label="Industry">
         <option value="">All Industries</option>
       </select>
-      <select id="region-filter">
+      <select id="region-filter" aria-label="Region">
         <option value="">All Regions</option>
       </select>
       <div class="view-toggle">
@@ -422,6 +426,7 @@
 </header>
 
 <div class="content-wrap">
+  <p>Six priority records were checked on October 7, 2026. Other records still need review; confirm dates with the organizer. <a href="https://github.com/LensmorOfficial/trade-show-calendar#data-sources">View sources and verification status</a>.</p>
   <div class="stats-bar" id="stats-bar"></div>
 
   <div class="legend" id="legend"></div>
@@ -431,7 +436,7 @@
 </div>
 
 <footer>
-  Data updated regularly &middot;
+  Partial source review: October 7, 2026 &middot;
   <a href="https://github.com/LensmorOfficial/trade-show-calendar" target="_blank" rel="noopener">View on GitHub</a>
   &middot; Want exhibitor intelligence?
   <a href="https://www.lensmor.com/?utm_source=github&utm_medium=trade-show-calendar&utm_campaign=footer" target="_blank" rel="noopener">Try Lensmor</a>
@@ -467,10 +472,10 @@ function fmtRange(start, end) {
   const e = new Date(end + 'T00:00:00');
   const mo = d => d.toLocaleString('en-US', { month: 'short' });
   const dy = d => d.getDate();
-  if (s.getMonth() === e.getMonth()) {
-    return `${mo(s)} ${dy(s)}–${dy(e)}`;
+  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth()) {
+    return `${mo(s)} ${dy(s)}–${dy(e)}, ${s.getFullYear()}`;
   }
-  return `${mo(s)} ${dy(s)} – ${mo(e)} ${dy(e)}`;
+  return `${mo(s)} ${dy(s)}, ${s.getFullYear()} – ${mo(e)} ${dy(e)}, ${e.getFullYear()}`;
 }
 
 function fmtDateShort(str) {
@@ -513,26 +518,26 @@ function renderTimeline() {
     return;
   }
 
-  // Group by month
+  // ISO year-month keys keep different editions in chronological order.
   const byMonth = {};
   for (const show of filtered) {
-    const m = getMonth(show.start_date);
-    if (!byMonth[m]) byMonth[m] = [];
-    byMonth[m].push(show);
+    const key = show.start_date.slice(0, 7);
+    if (!byMonth[key]) byMonth[key] = [];
+    byMonth[key].push(show);
   }
 
   const today = new Date();
-  const currentMonth = today.getMonth();
+  const currentKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}`;
 
   let html = '';
-  for (let m = 0; m < 12; m++) {
-    if (!byMonth[m]) continue;
-    const shows = byMonth[m];
-    const isCurrent = m === currentMonth;
+  for (const key of Object.keys(byMonth).sort()) {
+    const shows = byMonth[key];
+    const month = Number(key.slice(5, 7)) - 1;
+    const isCurrent = key === currentKey;
     html += `
       <div class="month-section">
         <div class="month-header ${isCurrent ? 'month-current' : ''}">
-          <span class="month-name">${MONTHS[m]}</span>
+          <span class="month-name">${MONTHS[month]} ${key.slice(0, 4)}</span>
           <span class="month-count">${shows.length}</span>
           <div class="month-line"></div>
         </div>
@@ -606,8 +611,12 @@ function applyFilters() {
   const q = document.getElementById('search').value.toLowerCase().trim();
   const ind = document.getElementById('industry-filter').value;
   const reg = document.getElementById('region-filter').value;
+  const edition = document.getElementById('edition-filter').value;
+  const now = new Date();
+  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
 
   filtered = allShows.filter(show => {
+    if (edition === 'upcoming' && show.end_date < today) return false;
     if (ind && show.industry !== ind) return false;
     if (reg && show.region !== reg) return false;
     if (q) {
@@ -668,7 +677,10 @@ function renderLegend() {
 
 // Bootstrap
 fetch('data/trade_shows.json')
-  .then(r => r.json())
+  .then(r => {
+    if (!r.ok) throw new Error(`Data request failed (${r.status})`);
+    return r.json();
+  })
   .then(data => {
     allShows = data.sort((a, b) => a.start_date.localeCompare(b.start_date));
     populateFilters();
@@ -676,12 +688,13 @@ fetch('data/trade_shows.json')
     applyFilters();
 
     document.getElementById('search').addEventListener('input', applyFilters);
+    document.getElementById('edition-filter').addEventListener('change', applyFilters);
     document.getElementById('industry-filter').addEventListener('change', applyFilters);
     document.getElementById('region-filter').addEventListener('change', applyFilters);
   })
   .catch(err => {
     document.getElementById('timeline-view').innerHTML =
-      `<div class="empty-state"><h3>Failed to load data</h3><p>${err.message}</p></div>`;
+      `<div class="empty-state"><h3>Failed to load data</h3><p>${esc(err.message)}</p></div>`;
   });
 </script>
 </body>

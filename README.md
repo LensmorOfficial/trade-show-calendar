@@ -15,7 +15,7 @@
 > Open dataset of global trade shows with dates, locations, and industry categories.
 
 **[View Interactive Calendar →](https://lensmorofficial.github.io/trade-show-calendar/)**
-Browse and filter 133 trade shows by industry, region, and month.
+Browse 133 event records by industry, region, and year/month; show upcoming/current editions or the full dataset.
 
 Built by [Lensmor](https://www.lensmor.com/?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar) — AI-powered trade show intelligence for B2B teams. Learn how to turn trade shows into [lead capture machines](https://www.lensmor.com/blog/trade-show-lead-capture?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar).
 
@@ -43,35 +43,40 @@ This repository provides a starter calendar dataset in both CSV and JSON formats
 
 ## Data Sources
 
-All entries are compiled from publicly available and verified sources:
+Official organizer and venue websites are the primary sources for event dates and locations. Community corrections should link the exact page supporting the change.
 
-- **Official event websites** — Primary source for dates, locations, and descriptions
-- **Exhibition industry associations** — [UFI](https://www.ufi.org/), [IAEE](https://www.iaee.com/), [SISO](https://www.siso.org/), [AUMA](https://www.auma.de/)
-- **Event directories** — [10Times](https://10times.com/), [EventsEye](https://www.eventseye.com/), [m+a Expodatabase](https://www.expodatabase.com/)
-- **Industry reports** — [CEIR Index](https://www.ceir.org/), [UFI Global Barometer](https://www.ufi.org/research/)
+### Verification status — October 7, 2026
 
-### Data quality
+This is a community-maintained starter dataset. A repository update does not mean every event has been reverified. Older editions remain in the dataset until a sourced replacement is available.
 
-- Each entry is manually verified against the official event website
-- Dates reflect the most recently confirmed schedule (some 2026 dates are tentative)
-- Events marked as postponed or cancelled are noted in the `notes` field
-- Discontinued events are removed during quarterly reviews
+Six priority records have been checked against official sources in this maintenance pass:
 
-### Update frequency
+| Event | Confirmed dates | Official source |
+| --- | --- | --- |
+| FABTECH, Las Vegas | October 21–23, 2026 | [Organizer](https://cdn.fabtechexpo.com/attend) |
+| MEDICA, Düsseldorf | November 16–19, 2026 | [Organizer](https://www.medica-tradefair.com/en/Visit/What_to_expect/Reasons_to_attend_1) |
+| GITEX Global, Dubai | December 7–11, 2026 | [Organizer](https://www.gitex.com/) — summit December 7; expo December 8–11 |
+| CES, Las Vegas | January 6–9, 2027 | [Organizer](https://www.ces.tech/about-ces/about-ces/) |
+| MWC Barcelona | March 1–4, 2027 | [Organizer](https://www.mwcbarcelona.com/) |
+| Hannover Messe | April 5–8, 2027 | [Organizer](https://www.hannovermesse.de/de/fuer-besucher/oeffnungszeiten/) |
 
-- **Monthly** — New events and date corrections
-- **Quarterly** — Full review of all entries for accuracy
-- **Community** — Pull requests are reviewed and merged on a rolling basis
+The matching records, source URLs, and check dates are stored in [data/verification.json](data/verification.json). The other **127 records have not been reverified in this pass**. Always confirm the edition, dates, location, and access requirements with the organizer before making plans.
+
+The interactive calendar groups events by year and month and lets you switch between upcoming/current and all listed editions.
+
+### Data validation
+
+```bash
+python3 scripts/validate-data.py
+```
+
+This checks ISO dates, date order, required fields, duplicate editions, CSV/JSON consistency, and verification records. It reports past editions for maintenance planning; it does not verify organizer websites or silently advance event dates.
+
+Validation runs on pull requests and changes to `main`.
 
 ## Coverage
 
-The dataset currently includes **133 trade shows** across:
-
-- 19 industry categories (Technology, Food & Beverage, Healthcare, Manufacturing, Automotive, Fashion, Energy, Agriculture, Construction, Consumer Goods, Real Estate, Digital Marketing, Pharmaceutical, Beauty & Personal Care, Education, Retail, Finance & Fintech, Defense, Logistics & Supply Chain)
-- 5 regions (Asia, Europe, North America, Middle East & Africa, Latin America)
-- 35+ countries
-
-We are actively expanding coverage. See [open issues](https://github.com/LensmorOfficial/trade-show-calendar/issues) for planned additions.
+The dataset includes **133 event records**, **24 industry categories**, **5 regions**, and **26 country/territory labels**. These counts describe the records in this repository, including past editions; they do not represent complete global coverage.
 
 ## Contributing
 
@@ -93,7 +98,7 @@ When adding new events, please include:
 - [awesome-trade-shows](https://github.com/LensmorOfficial/awesome-trade-shows) — Curated list of 130+ trade shows across 16 industries
 - [trade-show-world-map](https://github.com/LensmorOfficial/trade-show-world-map?utm_source=github&utm_medium=readme&utm_campaign=trade-show-calendar) — Interactive world map of global trade shows by region and industry
 - [exhibitor-intelligence-playbook](https://github.com/LensmorOfficial/exhibitor-intelligence-playbook) — Complete B2B trade show ROI playbook
-- [trade-show-skills](https://github.com/LensmorOfficial/trade-show-skills) — AI-powered Claude Code skills for trade show automation
+- [trade-show-skills](https://github.com/LensmorOfficial/trade-show-skills) — Reusable OpenClaw skills for trade show planning and outreach
 - [event-tech-landscape](https://github.com/LensmorOfficial/event-tech-landscape) — Map of 80+ tools powering the event industry
 - [trade-show-email-templates](https://github.com/LensmorOfficial/trade-show-email-templates) — Ready-to-use email templates for trade show outreach
 
