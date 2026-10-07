@@ -1,0 +1,50 @@
+[
+  {
+    "name": "CES",
+    "start_date": "2027-01-06",
+    "end_date": "2027-01-09",
+    "city": "Las Vegas",
+    "source_url": "https://www.ces.tech/about-ces/about-ces/",
+    "verified_on": "2026-10-07"
+  },
+  {
+    "name": "MWC Barcelona",
+    "start_date": "2027-03-01",
+    "end_date": "2027-03-04",
+    "city": "Barcelona",
+    "source_url": "https://www.mwcbarcelona.com/",
+    "verified_on": "2026-10-07"
+  },
+  {
+    "name": "GITEX Global",
+    "start_date": "2026-12-07",
+    "end_date": "2026-12-11",
+    "city": "Dubai",
+    "source_url": "https://www.gitex.com/",
+    "verified_on": "2026-10-07"
+  },
+  {
+    "name": "MEDICA",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-19",
+    "city": "Dusseldorf",
+    "source_url": "https://www.medica-tradefair.com/en/Visit/What_to_expect/Reasons_to_attend_1",
+    "verified_on": "2026-10-07"
+  },
+  {
+    "name": "Hannover Messe",
+    "start_date": "2027-04-05",
+    "end_date": "2027-04-08",
+    "city": "Hanover",
+    "source_url": "https://www.hannovermesse.de/de/fuer-besucher/oeffnungszeiten/",
+    "verified_on": "2026-10-07"
+  },
+  {
+    "name": "FABTECH",
+    "start_date": "2026-10-21",
+    "end_date": "2026-10-23",
+    "city": "Las Vegas",
+    "source_url": "https://cdn.fabtechexpo.com/attend",
+    "verified_on": "2026-10-07"
+  }
+]

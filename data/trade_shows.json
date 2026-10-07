@@ -4,24 +4,24 @@
     "website": "https://www.ces.tech/",
     "city": "Las Vegas",
     "country": "United States",
-    "start_date": "2026-01-06",
-    "end_date": "2026-01-09",
+    "start_date": "2027-01-06",
+    "end_date": "2027-01-09",
     "frequency": "Annual",
     "industry": "Technology & Electronics",
     "region": "North America",
-    "notes": "Consumer electronics and innovation"
+    "notes": "Consumer electronics and innovation; next confirmed edition: CES 2027"
   },
   {
     "name": "MWC Barcelona",
     "website": "https://www.mwcbarcelona.com/",
     "city": "Barcelona",
     "country": "Spain",
-    "start_date": "2026-03-02",
-    "end_date": "2026-03-05",
+    "start_date": "2027-03-01",
+    "end_date": "2027-03-04",
     "frequency": "Annual",
     "industry": "Technology & Electronics",
     "region": "Europe",
-    "notes": "Mobile and telecom industry"
+    "notes": "Mobile and telecom industry; next confirmed edition: MWC27 Barcelona"
   },
   {
     "name": "COMPUTEX",
@@ -52,12 +52,12 @@
     "website": "https://www.gitex.com/",
     "city": "Dubai",
     "country": "United Arab Emirates",
-    "start_date": "2026-10-13",
-    "end_date": "2026-10-17",
+    "start_date": "2026-12-07",
+    "end_date": "2026-12-11",
     "frequency": "Annual",
     "industry": "Technology & Electronics",
     "region": "Middle East & Africa",
-    "notes": "Technology showcase for MENA"
+    "notes": "Expo City Dubai; GITEX Summit on December 7, exhibition on December 8-11, 2026"
   },
   {
     "name": "Japan IT Week",
@@ -304,12 +304,12 @@
     "website": "https://www.hannovermesse.de/",
     "city": "Hanover",
     "country": "Germany",
-    "start_date": "2026-04-20",
-    "end_date": "2026-04-24",
+    "start_date": "2027-04-05",
+    "end_date": "2027-04-08",
     "frequency": "Annual",
     "industry": "Manufacturing & Industrial",
     "region": "Europe",
-    "notes": "Industrial technology and manufacturing"
+    "notes": "Industrial technology and manufacturing; next confirmed edition: HANNOVER MESSE 2027"
   },
   {
     "name": "IMTS",
@@ -338,14 +338,14 @@
   {
     "name": "FABTECH",
     "website": "https://www.fabtechexpo.com/",
-    "city": "Chicago",
+    "city": "Las Vegas",
     "country": "United States",
-    "start_date": "2026-11-09",
-    "end_date": "2026-11-12",
+    "start_date": "2026-10-21",
+    "end_date": "2026-10-23",
     "frequency": "Annual",
     "industry": "Manufacturing & Industrial",
     "region": "North America",
-    "notes": "Metal forming and fabrication"
+    "notes": "Metal forming and fabrication; 2026 edition at Las Vegas Convention Center"
   },
   {
     "name": "Automatica",
@@ -1521,11 +1521,7 @@
     "frequency": "Annual",
     "industry": "Technology & Electronics",
     "region": "North America",
-    "notes": "Technology",
-    "null": [
-      " music",
-      " and culture festival"
-    ]
+    "notes": "Technology, music, and culture festival"
   },
   {
     "name": "Money20/20 Europe",

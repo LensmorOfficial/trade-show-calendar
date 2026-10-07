@@ -1,9 +1,9 @@
 name,website,city,country,start_date,end_date,frequency,industry,region,notes
-CES,https://www.ces.tech/,Las Vegas,United States,2026-01-06,2026-01-09,Annual,Technology & Electronics,North America,Consumer electronics and innovation
-MWC Barcelona,https://www.mwcbarcelona.com/,Barcelona,Spain,2026-03-02,2026-03-05,Annual,Technology & Electronics,Europe,Mobile and telecom industry
+CES,https://www.ces.tech/,Las Vegas,United States,2027-01-06,2027-01-09,Annual,Technology & Electronics,North America,Consumer electronics and innovation; next confirmed edition: CES 2027
+MWC Barcelona,https://www.mwcbarcelona.com/,Barcelona,Spain,2027-03-01,2027-03-04,Annual,Technology & Electronics,Europe,Mobile and telecom industry; next confirmed edition: MWC27 Barcelona
 COMPUTEX,https://www.computextaipei.com.tw/,Taipei,Taiwan,2026-06-02,2026-06-06,Annual,Technology & Electronics,Asia,ICT trade show
 IFA Berlin,https://www.ifa-berlin.com/,Berlin,Germany,2026-09-04,2026-09-08,Annual,Technology & Electronics,Europe,Consumer electronics and appliances
-GITEX Global,https://www.gitex.com/,Dubai,United Arab Emirates,2026-10-13,2026-10-17,Annual,Technology & Electronics,Middle East & Africa,Technology showcase for MENA
+GITEX Global,https://www.gitex.com/,Dubai,United Arab Emirates,2026-12-07,2026-12-11,Annual,Technology & Electronics,Middle East & Africa,"Expo City Dubai; GITEX Summit on December 7, exhibition on December 8-11, 2026"
 Japan IT Week,https://www.japan-it.jp/en-gb.html,Tokyo,Japan,2026-04-08,2026-04-10,Biannual,Technology & Electronics,Asia,Japan IT trade show
 Embedded World,https://www.embedded-world.de/en,Nuremberg,Germany,2026-03-10,2026-03-12,Annual,Technology & Electronics,Europe,Embedded systems and IoT
 SEMICON China,https://www.semiconchina.org/,Shanghai,China,2026-03-18,2026-03-20,Annual,Technology & Electronics,Asia,Semiconductor manufacturing
@@ -24,10 +24,10 @@ RSNA,https://www.rsna.org/annual-meeting,Chicago,United States,2026-11-29,2026-1
 BIO International Convention,https://www.bio.org/events/bio-international-convention,Boston,United States,2026-06-08,2026-06-11,Annual,Healthcare & Medical,North America,Biotechnology convention
 FIME,https://www.fime.com/,Miami,United States,2026-06-24,2026-06-26,Annual,Healthcare & Medical,North America,Medical device and equipment
 MEDLAB Middle East,https://www.medlabme.com/,Dubai,United Arab Emirates,2026-02-09,2026-02-12,Annual,Healthcare & Medical,Middle East & Africa,Laboratory and diagnostics
-Hannover Messe,https://www.hannovermesse.de/,Hanover,Germany,2026-04-20,2026-04-24,Annual,Manufacturing & Industrial,Europe,Industrial technology and manufacturing
+Hannover Messe,https://www.hannovermesse.de/,Hanover,Germany,2027-04-05,2027-04-08,Annual,Manufacturing & Industrial,Europe,Industrial technology and manufacturing; next confirmed edition: HANNOVER MESSE 2027
 IMTS,https://www.imts.com/,Chicago,United States,2026-09-14,2026-09-19,Biennial,Manufacturing & Industrial,North America,Manufacturing technology show
 EMO Hannover,https://emo-hannover.de/en,Hanover,Germany,2027-09-18,2027-09-23,Biennial,Manufacturing & Industrial,Europe,Machine tool and production technology
-FABTECH,https://www.fabtechexpo.com/,Chicago,United States,2026-11-09,2026-11-12,Annual,Manufacturing & Industrial,North America,Metal forming and fabrication
+FABTECH,https://www.fabtechexpo.com/,Las Vegas,United States,2026-10-21,2026-10-23,Annual,Manufacturing & Industrial,North America,Metal forming and fabrication; 2026 edition at Las Vegas Convention Center
 Automatica,https://automatica-munich.com/en/,Munich,Germany,2026-06-24,2026-06-27,Biennial,Manufacturing & Industrial,Europe,Automation and robotics
 EuroBLECH,https://www.euroblech.com/en/,Hanover,Germany,2026-10-20,2026-10-23,Biennial,Manufacturing & Industrial,Europe,Sheet metal working
 AHR Expo,https://www.ahrexpo.com/,Las Vegas,United States,2026-01-26,2026-01-28,Annual,Manufacturing & Industrial,North America,HVACR industry
@@ -125,7 +125,7 @@ Cityscape Global,https://www.cityscapeglobal.com/,Riyadh,Saudi Arabia,2026-09-07
 WindEnergy Hamburg,https://www.windenergyhamburg.com/,Hamburg,Germany,2026-09-22,2026-09-25,Biennial,Energy & Environment,Europe,Wind energy industry expo
 Intersolar Europe,https://www.intersolar.de/,Munich,Germany,2026-06-17,2026-06-20,Annual,Energy & Environment,Europe,Solar energy and smart energy management
 World Future Energy Summit,https://www.worldfutureenergysummit.com/,Abu Dhabi,United Arab Emirates,2026-01-19,2026-01-22,Annual,Energy & Environment,Middle East & Africa,Renewable and clean energy
-SXSW,https://www.sxsw.com/,Austin,United States,2026-03-13,2026-03-21,Annual,Technology & Electronics,North America,Technology, music, and culture festival
+SXSW,https://www.sxsw.com/,Austin,United States,2026-03-13,2026-03-21,Annual,Technology & Electronics,North America,"Technology, music, and culture festival"
 Money20/20 Europe,https://europe.money2020.com/,Amsterdam,Netherlands,2026-06-02,2026-06-05,Annual,Finance & Fintech,Europe,Fintech payments and financial services
 Money20/20 USA,https://us.money2020.com/,Las Vegas,United States,2026-10-25,2026-10-28,Annual,Finance & Fintech,North America,Global fintech and payments event
 Singapore FinTech Festival,https://www.fintechfestival.sg/,Singapore,Singapore,2026-11-11,2026-11-13,Annual,Finance & Fintech,Asia,World's largest fintech event
